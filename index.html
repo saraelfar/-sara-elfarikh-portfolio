@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio - Sara Elfarikh</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  </head>
+  <body id="header">
+    <!-- Loading Page -->
+    <div id="loading-page">
+      <div class="loading-clock">
+        <div class="center-dot"></div>
+      </div>
+      <p data-lang="en">wait a minute...</p>
+      <p data-lang="fr" style="display: none">un instant...</p>
+    </div>
+
+    <!-- Navbar Section -->
+    <nav>
+      <div class="logo">
+        <h1>SARA ELFARIKH</h1>
+      </div>
+      <ul class="nav-links">
+        <li id="theme-toggle"><i class="fas fa-moon"></i></li>
+        <li id="language-toggle"><i class="fas fa-language"></i></li>
+        <li><a href="#about" data-lang="en">About</a></li>
+        <li><a href="#about" data-lang="fr" style="display: none">À propos</a></li>
+        <li><a href="#skills" data-lang="en">Skills</a></li>
+        <li><a href="#skills" data-lang="fr" style="display: none">Compétences</a></li>
+        <li><a href="#projects-section" data-lang="en">Projects</a></li>
+        <li><a href="#projects-section" data-lang="fr" style="display: none">Projets</a></li>
+        <li><a href="#Education" data-lang="en">Education</a></li>
+        <li><a href="#Education" data-lang="fr" style="display: none">Éducation</a></li>
+        <li><a href="#contact" data-lang="en">Contact Us</a></li>
+        <li><a href="#contact" data-lang="fr" style="display: none">Contact</a></li>
+      </ul>
+      <!-- Hamburger Menu for Mobile View -->
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+
+    <!-- Side Menubar for Mobile -->
+    <div class="menubar">
+      <button class="close-btn">&times;</button>
+      <ul>
+        <li id="theme-toggle-mobile"><i class="fas fa-moon"></i></li>
+        <li id="language-toggle-mobile"><i class="fas fa-language"></i></li>
+        <li><a href="#about" data-lang="en">About</a></li>
+        <li><a href="#about" data-lang="fr" style="display: none">À propos</a></li>
+        <li><a href="#skills" data-lang="en">Skills</a></li>
+        <li><a href="#skills" data-lang="fr" style="display: none">Compétences</a></li>
+        <li><a href="#projects-section" data-lang="en">Projects</a></li>
+        <li><a href="#projects-section" data-lang="fr" style="display: none">Projets</a></li>
+        <li><a href="#Education" data-lang="en">Education</a></li>
+        <li><a href="#Education" data-lang="fr" style="display: none">Éducation</a></li>
+        <li><a href="#contact" data-lang="en">Contact Us</a></li>
+        <li><a href="#contact" data-lang="fr" style="display: none">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Flex Container with Two Sections -->
+    <div class="flex-container">
+      <div>
+        <h1 data-lang="en">Hello, I'm Sara, a Web Developer</h1>
+        <h1 data-lang="fr" style="display: none">Bonjour, je suis Sara, Développeuse Web</h1>
+        <h3 data-lang="en">About Me:</h3>
+        <h3 data-lang="fr" style="display: none">À propos de moi :</h3>
+        <p class="about" data-lang="en">
+          I am a second-year full stack development student at ISTA NTYC Syba,
+          specializing in building web applications. I am passionate about
+          applying my skills in real-world projects and contributing to
+          innovative web solutions.
+        </p>
+        <p class="about" data-lang="fr" style="display: none">
+          Je suis étudiante en développement full stack en deuxième année à l'ISTA NTYC Syba,
+          spécialisée dans la création d'applications web. Je suis passionnée par
+          l'application de mes compétences dans des projets réels et la contribution à
+          des solutions web innovantes.
+        </p>
+        <!-- Buttons for Resume and Projects -->
+        <div class="button-container">
+          <a href="resume.html">
+            <button class="btn resume-btn" data-lang="en">Download CV</button>
+            <button class="btn resume-btn" data-lang="fr" style="display: none">Télécharger CV</button>
+          </a>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://github.com/sara-elfarikh" target="_blank">
+            <i class="fa-brands fa-github fa-2x"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/sara-elfarikh-a085822a1"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+          <a href="mailto:saraelfa20@gmail.com">
+            <i class="fa-solid fa-envelope fa-2x"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Image Section -->
+      <div>
+        <img
+          src="undraw_website_5bo8.svg"
+          alt="Web Development Illustration"
+          width="100%"
+        />
+      </div>
+    </div>
+
+    <div id="Education" class="Education">
+      <!-- Education Section -->
+      <div class="education-section">
+        <h1 data-lang="en">Education</h1>
+        <h1 data-lang="fr" style="display: none">Éducation</h1>
+
+        <div class="education-item">
+          <div class="icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="details">
+            <h3>Physique et Chimie</h3>
+            <p data-lang="en">Baccalaureate - Mouahidin High School, Marrakech</p>
+            <p data-lang="fr" style="display: none">Baccalauréat - Lycée Mouahidin, Marrakech</p>
+          </div>
+          <span class="date">2022</span>
+        </div>
+        <div class="education-item">
+          <div class="icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="details">
+            <h3>Economics</h3>
+            <p data-lang="en">
+              Faculty of Legal, Economic, and Social Sciences - Marrakesh, Morocco
+            </p>
+            <p data-lang="fr" style="display: none">
+              Faculté des Sciences Juridiques, Économiques et Sociales - Marrakech, Maroc
+            </p>
+          </div>
+          <span class="date">2022 - 2023</span>
+        </div>
+
+        <div class="education-item">
+          <div class="icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="details">
+            <h3 data-lang="en">Full Stack Development</h3>
+            <h3 data-lang="fr" style="display: none">Développement Full Stack</h3>
+            <p data-lang="en">
+              Diploma in Web Development - Specialized Institute Of Applied Technology NTIC, Marrakech
+            </p>
+            <p data-lang="fr" style="display: none">
+              Diplôme en Développement Web - Institut Spécialisé de Technologie Appliquée NTIC, Marrakech
+            </p>
+          </div>
+          <span class="date">2023 - 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="certificates" class="certificate-section">
+      <h3 data-lang="en">CERTIFICATIONS</h3>
+      <h3 data-lang="fr" style="display: none">CERTIFICATIONS</h3>
+      <div class="certificate-cards">
+        <div class="certificate-card" data-aos="fade-up">
+          <img src="alx.jpg" alt="AI Career Essentials Certificate" class="certificate-image" />
+          <div class="certificate-details">
+            <h3 class="certificate-title">AI Career Essentials</h3>
+            <p class="certificate-description">Issued by: Alx</p>
+            <p class="certificate-date">Date: December 2024</p>
+          </div>
+        </div>
+        <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="cisco.jpg" alt="Cisco Certificate" class="certificate-image" />
+          <div class="certificate-details">
+            <h3 class="certificate-title">Introduction to Data Science</h3>
+            <p class="certificate-description">Issued by: Cisco</p>
+            <p class="certificate-date">Date: October 2024</p>
+          </div>
+        </div>
+        <div class="certificate-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="greate.jpg" alt="MySQL Certificate" class="certificate-image" />
+          <div class="certificate-details">
+            <h3 class="certificate-title">MySQL</h3>
+            <p class="certificate-description">Issued by: Great Learning</p>
+            <p class="certificate-date">Date: October 2024</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="skills" class="skills">
+      <h1 data-lang="en">Skills</h1>
+      <h1 data-lang="fr" style="display: none">Compétences</h1>
+      <h3 data-lang="en">Hard Skills:</h3>
+      <h3 data-lang="fr" style="display: none">Compétences Techniques :</h3>
+      <div class="slider">
+        <ul>
+          
+          <li><i class="fa-brands fa-html5"></i> <span>HTML</span></li>
+          <li><i class="fa-brands fa-css3-alt"></i> <span>CSS</span></li>
+          <li><i class="fa-brands fa-bootstrap"></i> <span>Bootstrap</span></li>
+          <li><i class="fa-brands fa-js"></i> <span>JavaScript</span></li>
+          <li><i class="fa-solid fa-file-code"></i> <span>jQuery</span></li>
+          <li><i class="fa-brands fa-python"></i> <span>Python</span></li>
+          <li><i class="fa-brands fa-php"></i> <span>PHP</span></li>
+          <li><i class="fa-solid fa-database"></i> <span>MySQL</span></li>
+          <li><i class="fa-brands fa-react"></i> <span>React.js</span></li>
+          <li><i class="fa-brands fa-laravel"></i> <span>Laravel</span></li>
+          <li><i class="fa-solid fa-database"></i> <span>MongoDB</span></li>
+          <li><i class="fa-brands fa-git-alt"></i> <span>Git</span></li>
+          <li><i class="fa-brands fa-github"></i> <span>GitHub</span></li>          <li><i class="fa-brands fa-figma"></i> <span>Figma</span></li>
+          <li><i class="fa-brands fa-docker"></i> <span>Docker</span></li>
+          <li><i class="fa-solid fa-cloud"></i> <span>Cloud</span></li>
+
+          <li><i class="fa-brands fa-html5"></i> <span>HTML</span></li>
+          <li><i class="fa-brands fa-css3-alt"></i> <span>CSS</span></li>
+          <li><i class="fa-brands fa-bootstrap"></i> <span>Bootstrap</span></li>
+          <li><i class="fa-brands fa-js"></i> <span>JavaScript</span></li>
+          <li><i class="fa-solid fa-file-code"></i> <span>jQuery</span></li>
+          <li><i class="fa-brands fa-python"></i> <span>Python</span></li>
+          <li><i class="fa-brands fa-php"></i> <span>PHP</span></li>
+          <li><i class="fa-solid fa-database"></i> <span>MySQL</span></li>
+          <li><i class="fa-brands fa-react"></i> <span>React.js</span></li>
+          <li><i class="fa-brands fa-laravel"></i> <span>Laravel</span></li>
+          <li><i class="fa-solid fa-database"></i> <span>MongoDB</span></li>
+          <li><i class="fa-brands fa-git-alt"></i> <span>Git</span></li>
+          <li><i class="fa-brands fa-github"></i> <span>GitHub</span></li>          <li><i class="fa-brands fa-figma"></i> <span>Figma</span></li>
+          <li><i class="fa-brands fa-docker"></i> <span>Docker</span></li>
+          <li><i class="fa-solid fa-cloud"></i> <span>Cloud</span></li>
+        </ul>
+      </div>
+      <div class="soft-skills">
+        <h3 data-lang="en">Soft Skills :</h3>
+        <h3 data-lang="fr" style="display: none">Compétences Douces :</h3>
+        <label>
+          <span data-lang="en">Communication</span>
+          <span data-lang="fr" style="display: none">Communication</span>
+          <input type="range" min="0" max="100" value="90" class="slider" disabled />
+          <span class="skill-percentage">90%</span>
+        </label>
+        <label>
+          <span data-lang="en">Problem-Solving</span>
+          <span data-lang="fr" style="display: none">Résolution de Problèmes</span>
+          <input type="range" min="0" max="100" value="77" class="slider" disabled />
+          <span class="skill-percentage">77%</span>
+        </label>
+        <label>
+          <span data-lang="en">Time Management</span>
+          <span data-lang="fr" style="display: none">Gestion du Temps</span>
+          <input type="range" min="0" max="100" value="80" class="slider" disabled />
+          <span class="skill-percentage">80%</span>
+        </label>
+        <label>
+          <span data-lang="en">Adaptability</span>
+          <span data-lang="fr" style="display: none">Adaptabilité</span>
+          <input type="range" min="0" max="100" value="89" class="slider" disabled />
+          <span class="skill-percentage">89%</span>
+        </label>
+        <label>
+          <span data-lang="en">Attention to Detail</span>
+          <span data-lang="fr" style="display: none">Attention aux Détails</span>
+          <input type="range" min="0" max="100" value="84" class="slider" disabled />
+          <span class="skill-percentage">84%</span>
+        </label>
+        <label>
+          <span data-lang="en">Teamwork</span>
+          <span data-lang="fr" style="display: none">Travail d'Équipe</span>
+          <input type="range" min="0" max="100" value="80" class="slider" disabled />
+          <span class="skill-percentage">80%</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="projects-section" id="projects-section" data-aos="fade-up" data-aos-duration="1000">
+      <h2 data-lang="en">My Projects</h2>
+      <h2 data-lang="fr" style="display: none">Mes Projets</h2>
+      <div class="projects-container">
+        <!-- Project 1: YouTube API -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="youtube.jpg" alt="YouTube API Project" class="project-image" />
+            <div class="project-overlay">
+              <a href="https://github.com/saraelfar/youtube" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://radiant-cassata-38d0d7.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>YouTube Video Search App</h3>
+            <p data-lang="en">
+              A responsive React app using Bootstrap and the YouTube Data API. Users can search for videos, browse by category (e.g., Music, Gaming), and watch videos directly on YouTube. Features a clean grid layout and seamless integration with YouTube.
+            </p>
+            <p data-lang="fr" style="display: none">
+              Une application React responsive utilisant Bootstrap et l'API YouTube Data. Les utilisateurs peuvent rechercher des vidéos, parcourir par catégorie (par exemple, Musique, Jeux) et regarder des vidéos directement sur YouTube. Dispose d'une mise en page en grille propre et d'une intégration transparente avec YouTube.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 2: Recipe Finder App -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="image.png" alt="Recipe Finder App" class="project-image" />
+            <div class="project-overlay">
+              <a href="https://github.com/yourusername/recipe-finder-app" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://elegant-clafoutis-fdb211.netlify.app" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Recipe Search and Meal Planning App</h3>
+            <p data-lang="en">
+              A React and Bootstrap app powered by the Spoonacular API. Search for recipes, filter by category/cuisine, and create meal plans. Features include nutritional info, preparation time, a shopping list generator, and meal plan management. Perfect for organizing meals and groceries effortlessly.
+            </p>
+            <p data-lang="fr" style="display: none">
+              Une application React et Bootstrap alimentée par l'API Spoonacular. Recherchez des recettes, filtrez par catégorie/cuisine et créez des plans de repas. Les fonctionnalités incluent des informations nutritionnelles, un temps de préparation, un générateur de liste de courses et une gestion des plans de repas. Parfait pour organiser les repas et les courses sans effort.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 3: My GitHub Page -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="im.png" alt="GitHub Project" class="project-image" />
+            <div class="project-overlay">
+              <a href="https://github.com/saraelfar/todo-app" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/sara-elfarikh/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>ToDo App with Firebase</h3>
+            <p data-lang="en">
+              A task management application developed with <strong>React</strong> and <strong>Firebase</strong>. Features include authentication, task addition/editing/deletion, due dates, notifications, and real-time synchronization.
+            </p>
+            <p data-lang="fr">
+              Une application de gestion de tâches développée avec <strong>React</strong> et <strong>Firebase</strong>. Fonctionnalités : authentification, ajout/édition/suppression de tâches, dates d'échéance, notifications et synchronisation en temps réel.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 4: ALX Portfolio -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="pro1.png" alt="ALX Portfolio" class="project-image" />
+            <div class="project-overlay">
+              <a href="https://github.com/saraelfar/github" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://saraelfar.github.io/github/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>DigitalWave Agency - One Page Design</h3>
+            <p data-lang="en">
+              A modern, responsive one-page website for a digital marketing agency. Features services, client testimonials, and contact info with smooth animations and interactive elements. Built with HTML, CSS, and JavaScript, it’s optimized for all devices.
+            </p>
+            <p data-lang="fr" style="display: none">
+              Un site web one-page moderne et responsive pour une agence de marketing digital. Présente des services, des témoignages clients et des informations de contact avec des animations fluides et des éléments interactifs. Construit avec HTML, CSS et JavaScript, il est optimisé pour tous les appareils.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 6: Weather App -->
+        <div class="project-item">
+          <div class="project-image">
+            <img src="weather.png" alt="Weather App Project" class="project-image" />
+            <div class="project-overlay">
+              <a href="https://github.com/saraelfar/Weather_App" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://regal-praline-ee2d77.netlify.app" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Weather App</h3>
+            <p data-lang="en">
+              A responsive weather app built with <strong>React</strong> and <strong>OpenWeatherMap API</strong>. Features real-time weather, hourly and 10-day forecasts, air quality data, sunrise/sunset times, and a favorites system. Includes dynamic animations, autocomplete search, and unit conversion.
+            </p>
+            <p data-lang="fr" style="display: none">
+              Une application météo responsive construite avec <strong>React</strong> et l'<strong>API OpenWeatherMap</strong>. Fonctionnalités : météo en temps réel, prévisions horaires et à 10 jours, données sur la qualité de l'air, heures de lever/coucher du soleil et un système de favoris. Inclut des animations dynamiques, une recherche avec autocomplétion et une conversion d'unités.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Slider Controls (Hidden on Mobile) -->
+      <div class="slider-controls">
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <section id="contact" class="contact container">
+      <h2 class="title" data-lang="en">Let’s Work Together</h2>
+      <h2 class="title" data-lang="fr" style="display: none">Travaillons Ensemble</h2>
+      <div class="contact-container">
+        <form id="contactForm">
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name" class="icon" data-lang="en">Name:</label>
+            <label for="name" class="icon" data-lang="fr" style="display: none">Nom :</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control thick"
+              placeholder="Your name (or superhero alias) 🦸‍♂️"
+              required
+            />
+          </div>
+    
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email" class="icon" data-lang="en">Email:</label>
+            <label for="email" class="icon" data-lang="fr" style="display: none">Email :</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control thick"
+              placeholder="Your email (no spam, pinky promise!) 📧"
+              required
+            />
+          </div>
+    
+          <!-- Message Field -->
+          <div class="form-group message">
+            <label for="message" class="icon" data-lang="en">Message:</label>
+            <label for="message" class="icon" data-lang="fr" style="display: none">Message :</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              placeholder="Your message (be nice, or I'll cry) 💌"
+              required
+            ></textarea>
+          </div>
+    
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">
+            <span class="button-text" data-lang="en">Send</span>
+            <span class="button-text" data-lang="fr" style="display: none">Envoyer</span>
+            <span class="button-icon">🚀</span>
+          </button>
+        </form>
+    
+        <!-- Hidden Thank You Message -->
+        <div id="thankYouMessage" style="display: none;">
+          <h2 data-lang="en">Thank You!</h2>
+          <h2 data-lang="fr" style="display: none">Merci!</h2>
+          <p data-lang="en">Your message has been sent successfully. I'll get back to you soon!</p>
+          <p data-lang="fr" style="display: none">Votre message a été envoyé avec succès. Je vous répondrai bientôt!</p>
+        </div>
+    
+        <!-- Google Maps Embed -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115481!2d-7.981417!3d31.629499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMarrakech%2C%20Morocco!5e0!3m2!1sen!2sfr!4v1606996552873!5m2!1sen!2sfr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <button id="scrollButton" class="scroll-btn">
+      <span id="scrollIcon">↓</span>
+    </button>
+
+    <footer id="footer">
+      <p data-lang="en">
+        Thank you for visiting my portfolio! I'm passionate about crafting impactful digital solutions and constantly improving my web development skills. Have a project in mind or just want to say hi? Feel free to reach out through the contact form or connect with me on social media!
+      </p>
+      <p data-lang="fr" style="display: none">
+        Merci d'avoir visité mon portfolio ! Je suis passionnée par la création de solutions numériques impactantes et l'amélioration constante de mes compétences en développement web. Vous avez un projet en tête ou vous voulez simplement dire bonjour ? N'hésitez pas à me contacter via le formulaire de contact ou à me suivre sur les réseaux sociaux !
+      </p>
+      <div class="social-icons-footer">
+        <div class="social-icons">
+          <a href="https://github.com/sara-elfarikh" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/sara-elfarikh-a085822a1" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:saraelfa20@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2024 Sara Elfarikh. All rights reserved. Made with ❤️ and ☕.</p>
+      </div>
+    </footer>
+    <!-- Add this before your main.js script -->
+    <!-- Include GSAP and ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        offset: 100,
+        easing: 'ease-in-out',
+        once: true,
+      });
+
+      // Hide Loading Page
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          document.body.classList.add('loaded');
+        }, 2000); // Adjust the delay as needed
+      });
+
+      // Language Toggle Functionality
+      const languageToggle = document.getElementById('language-toggle');
+      const languageToggleMobile = document.getElementById('language-toggle-mobile');
+      const elementsToTranslate = document.querySelectorAll('[data-lang]');
+
+      let currentLanguage = 'en'; // Default language
+
+      function toggleLanguage() {
+        currentLanguage = currentLanguage === 'en' ? 'fr' : 'en'; // Toggle between English and French
+        elementsToTranslate.forEach((element) => {
+          if (element.getAttribute('data-lang') === currentLanguage) {
+            element.style.display = 'block'; // Show the current language
+          } else {
+            element.style.display = 'none'; // Hide the other language
+          }
+        });
+      }
+
+      languageToggle.addEventListener('click', toggleLanguage);
+      languageToggleMobile.addEventListener('click', toggleLanguage);
+
+      // Dark Mode Toggle Functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+      const html = document.documentElement;
+
+      function toggleTheme() {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+      }
+
+      function updateThemeIcon(theme) {
+        const icon = theme === 'dark' ? 'fa-sun' : 'fa-moon';
+        themeToggle.querySelector('i').className = `fas ${icon}`;
+        themeToggleMobile.querySelector('i').className = `fas ${icon}`;
+      }
+
+      themeToggle.addEventListener('click', toggleTheme);
+      themeToggleMobile.addEventListener('click', toggleTheme);
+
+      // Load saved theme or default to system preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        html.setAttribute('data-theme', 'dark');
+        updateThemeIcon('dark');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        updateThemeIcon('light');
+      }
+    </script>
+  </body>
+</html>

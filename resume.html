@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sara Elfarikh - Full Stack Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Amiri&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            font-family: 'Amiri', serif;
+        }
+
+        .profile-info h2 {
+            font-size: 1.5em;
+            color: #666;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+        }
+
+        .profile-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .profile-info a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        .profile-image {
+            max-width: 150px;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .summary {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+        }
+
+        .summary p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            display: inline-block;
+            font-family: 'Amiri', serif;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            padding: 5px 0;
+            color: #666;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+        }
+
+        .fa-solid, .fa-brands {
+            margin-right: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .skill-card {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-card i {
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .skill-card span {
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background: #121212;
+            color: #ffffff;
+        }
+
+        body.dark-mode .container {
+            background: rgba(30, 30, 30, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode .section h3 {
+            color: #bb86fc;
+        }
+
+        body.dark-mode .skill-card {
+            background: rgba(187, 134, 252, 0.1);
+        }
+
+        body.dark-mode .skill-card i {
+            color: #bb86fc;
+        }
+
+        body.dark-mode .skill-card span {
+            color: #ffffff;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                color: #000;
+            }
+
+            .container {
+                box-shadow: none;
+                border: none;
+            }
+
+            .profile-image {
+                display: none;
+            }
+
+            .section h3 {
+                color: #000;
+            }
+        }
+
+        #theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        #theme-toggle:hover {
+            background: #2980b9;
+        }
+
+        body.dark-mode #theme-toggle {
+            background: #bb86fc;
+        }
+
+        body.dark-mode #theme-toggle:hover {
+            background: #9b6cfc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-info">
+                <h1>Sara Elfarikh</h1>
+                <h2>Full Stack Web Developer</h2>
+                <p><i class="fa-solid fa-calendar-days"></i> 8 Novembre 2004</p>
+                <p><a href="mailto:saraelfa20@gmail.com"><i class="fa-solid fa-envelope"></i> saraelfa20@gmail.com</a></p>
+                <p><a href="tel:+212711702095"><i class="fa-solid fa-phone"></i> +212711702095</a></p>
+                <p><a href="http://linkedin.com/in/sara-elfarikh-a085822a1" target="_blank"><i class="fa-brands fa-linkedin"></i> Sara Elfarikh</a></p>
+                <p><a href="https://github.com/sara-elfarikh" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></p>
+            </div>
+            <div class="profile-image">
+                <img src="ana.png" alt="Sara Elfarikh">
+            </div>
+        </div>
+
+        <div class="summary">
+            <p>I am a second-year full stack development student at ISTA NTYC Syba, specializing in building web applications. I am passionate about applying my skills in real-world projects and contributing to innovative web solutions.</p>
+        </div>
+
+        <div class="section">
+            <h3><i class="fa-solid fa-briefcase"></i> Work History</h3>
+            <p><strong>2024 - present:</strong> Assistant Administrative Manager - Specialized Institute Of Applied Technology NTIC, Marrakech</p>
+            <ul>
+                <li>Assisted in managing training programs, utilizing Microsoft Office for data organization and documentation.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <p><strong>06/2022:</strong> Physique et Chimie, Baccalaureate - Mouahidin high school, Marrakech</p>
+            <p><strong>09/2023 - present:</strong> Full Stack Development, Diploma in Web Development - Specialized Institute Of Applied Technology NTIC, Marrakech</p>
+            <p><strong>2024:</strong> AI Career Essentials, Certificate - ALX Africa</p>
+            <p><strong>2024:</strong> Introduction to Data Science, Certificate - Cisco</p>
+            <p><strong>2024:</strong> MySQL, Certificate - Great Learning</p>
+        </div>
+
+        <div class="section">
+            <h3><i class="fa-solid fa-user"></i> Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-react"></i>
+                    <span>React.js</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-figma"></i>
+                    <span>Figma</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3><i class="fa-solid fa-language"></i> Languages</h3>
+            <ul>
+                <li>Arabic: Courant</li>
+                <li>English: Intermédiaire</li>
+                <li>French: Intermédiaire</li>
+                <li>Spanish: Notions</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3><i class="fa-solid fa-trophy"></i> Certifications</h3>
+            <ul>
+                <li>AI Career Essentials - ALX Africa</li>
+                <li>Introduction to Data Science - Cisco</li>
+                <li>MySQL - Great Learning</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3><i class="fa-solid fa-code"></i> Projects</h3>
+            <ul>
+                <li><strong>YouTube Video Search App:</strong> A React app integrated with the YouTube API for searching and watching videos.</li>
+                <li><strong>Recipe Finder App:</strong> A React app using the Spoonacular API for finding recipes and creating meal plans.</li>
+                <li><strong>ToDo App with Firebase:</strong> A task management app with authentication and real-time synchronization.</li>
+                <li><strong>Weather App:</strong> A React app using the OpenWeatherMap API for real-time weather updates.</li>
+            </ul>
+        </div>
+    </div>
+
+    <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
